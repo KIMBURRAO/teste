@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prévia Exclusiva - 1 Foto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .cta-button {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: #ff4757;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(255, 71, 87, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .cta-button:hover {
+            background-color: #ff6b81;
+            transform: scale(1.05);
+        }
+        .warning {
+            color: #ffa502;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        // Substitua este link pelo seu link principal do AdSense
+        const REDIRECT_URL = "https://SEU_SITE_ADSENSE_AQUI.com"; 
+        const VISITED_KEY = "visited_preview_1";
+
+        // Verifica se o usuário já acessou esta página antes
+        if (localStorage.getItem(VISITED_KEY)) {
+            // Redireciona imediatamente
+            window.location.replace(REDIRECT_URL);
+        } else {
+            // Marca como visitado para a próxima vez
+            localStorage.setItem(VISITED_KEY, "true");
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Conteúdo Exclusivo Liberado</h2>
+    <p class="warning">⚠️ Atenção: Você só poderá visualizar esta página uma vez. Se sair ou atualizar, o acesso será perdido.</p>
+    
+    <div class="gallery">
+        <!-- Substitua o src pelo link da sua foto real -->
+        <img src="https://via.placeholder.com/600x800/333333/ffffff?text=Sua+Foto+1+Aqui" alt="Foto Exclusiva 1">
+    </div>
+
+    <a href="https://SEU_SITE_ADSENSE_AQUI.com" class="cta-button">Acessar Conteúdo Completo</a>
+
+</body>
+</html>
